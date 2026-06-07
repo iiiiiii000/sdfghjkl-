@@ -1,0 +1,366 @@
+{
+  "dns": {
+    "fallbackStrategy": "disabledIfAnyMatch",
+    "servers": [
+      {
+        "address": "8.8.8.8",
+        "queryStrategy": "UseIP"
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "0.0.0.0",
+      "port": 10805,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "tag": "socks"
+    },
+    {
+      "listen": "0.0.0.0",
+      "port": 1080,
+      "protocol": "http",
+      "settings": {
+        "allowTransparent": true
+      },
+      "tag": "http"
+    },
+    {
+      "listen": "0.0.0.0",
+      "port": 10804,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "0.0.0.0",
+        "network": "tcp,udp",
+        "port": 10804
+      },
+      "tag": "dns-in"
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "tag": "🇫🇮 Финляндия ",
+      "settings": {
+        "vnext": [
+          {
+            "address": "95.164.55.194",
+            "port": 443,
+            "users": [
+              {
+                "id": "dbdf2786-088f-440d-bc74-7545b916405f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "serviceName": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "packetEncoding": "",
+        "tlsSettings": {
+          "serverName": "www.cloudflare.com",
+          "allowInsecure": false,
+          "fingerprint": "edge",
+          "alpn": []
+        },
+        "realitySettings": {
+          "publicKey": "MGKWbIse5wfZwDzLCuVOv4_Z_c1D0dBWsSyLQdrpmlo",
+          "shortId": "e8d2a1b4c39f8877",
+          "serverName": "www.cloudflare.com"
+        },
+        "kcpSettings": {
+          "seed": ""
+        },
+        "grpcSettings": {
+          "serviceName": ""
+        }
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇩🇪 Германия",
+      "settings": {
+        "vnext": [
+          {
+            "address": "80.253.249.187",
+            "port": 443,
+            "users": [
+              {
+                "id": "dbdf2786-088f-440d-bc74-7545b916405f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "serviceName": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "packetEncoding": "",
+        "tlsSettings": {
+          "serverName": "www.cloudflare.com",
+          "allowInsecure": false,
+          "fingerprint": "edge",
+          "alpn": []
+        },
+        "realitySettings": {
+          "publicKey": "Rt0UPm4jCurABfX6UnQReTQkmURaulL76dSbc1rDQhw",
+          "shortId": "e8d2a1b4c39f8877",
+          "serverName": "www.cloudflare.com"
+        },
+        "kcpSettings": {
+          "seed": ""
+        },
+        "grpcSettings": {
+          "serviceName": ""
+        }
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇷🇺 Россия",
+      "settings": {
+        "vnext": [
+          {
+            "address": "37.77.104.182",
+            "port": 443,
+            "users": [
+              {
+                "id": "dbdf2786-088f-440d-bc74-7545b916405f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "serviceName": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "packetEncoding": "",
+        "tlsSettings": {
+          "serverName": "www.cloudflare.com",
+          "allowInsecure": false,
+          "fingerprint": "edge",
+          "alpn": []
+        },
+        "realitySettings": {
+          "publicKey": "fTr_LAmKQdYpAhijlApm1kMjS8_11Y9HMKconlHmZWE",
+          "shortId": "e8d2a1b4c39f8877",
+          "serverName": "www.cloudflare.com"
+        },
+        "kcpSettings": {
+          "seed": ""
+        },
+        "grpcSettings": {
+          "serviceName": ""
+        }
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇸🇪 Швеция",
+      "settings": {
+        "vnext": [
+          {
+            "address": "89.125.37.92",
+            "port": 443,
+            "users": [
+              {
+                "id": "dbdf2786-088f-440d-bc74-7545b916405f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "serviceName": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "packetEncoding": "",
+        "tlsSettings": {
+          "serverName": "www.cloudflare.com",
+          "allowInsecure": false,
+          "fingerprint": "edge",
+          "alpn": []
+        },
+        "realitySettings": {
+          "publicKey": "Rt0UPm4jCurABfX6UnQReTQkmURaulL76dSbc1rDQhw",
+          "shortId": "e8d2a1b4c39f8877",
+          "serverName": "www.cloudflare.com"
+        },
+        "kcpSettings": {
+          "seed": ""
+        },
+        "grpcSettings": {
+          "serviceName": ""
+        }
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇺🇸 США ",
+      "settings": {
+        "vnext": [
+          {
+            "address": "78.153.155.153",
+            "port": 443,
+            "users": [
+              {
+                "id": "dbdf2786-088f-440d-bc74-7545b916405f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "serviceName": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "packetEncoding": "",
+        "tlsSettings": {
+          "serverName": "www.cloudflare.com",
+          "allowInsecure": false,
+          "fingerprint": "edge",
+          "alpn": []
+        },
+        "realitySettings": {
+          "publicKey": "51jWfY-ISbtpU_A-ywOU4ISh1qk4wJBQm7OuewQHrxE",
+          "shortId": "e8d2a1b4c39f8877",
+          "serverName": "www.cloudflare.com"
+        },
+        "kcpSettings": {
+          "seed": ""
+        },
+        "grpcSettings": {
+          "serviceName": ""
+        }
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇬🇧 Великобритания",
+      "settings": {
+        "vnext": [
+          {
+            "address": "89.185.84.173",
+            "port": 443,
+            "users": [
+              {
+                "id": "dbdf2786-088f-440d-bc74-7545b916405f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "serviceName": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "packetEncoding": "",
+        "tlsSettings": {
+          "serverName": "www.cloudflare.com",
+          "allowInsecure": false,
+          "fingerprint": "edge",
+          "alpn": []
+        },
+        "realitySettings": {
+          "publicKey": "Rt0UPm4jCurABfX6UnQReTQkmURaulL76dSbc1rDQhw",
+          "shortId": "e8d2a1b4c39f8877",
+          "serverName": "www.cloudflare.com"
+        },
+        "kcpSettings": {
+          "seed": ""
+        },
+        "grpcSettings": {
+          "serviceName": ""
+        }
+      }
+    },
+    {
+      "protocol": "vless",
+      "tag": "🇳🇱 Белый список #1",
+      "settings": {
+        "vnext": [
+          {
+            "address": "130.193.55.22",
+            "port": 443,
+            "users": [
+              {
+                "id": "dbdf2786-088f-440d-bc74-7545b916405f",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision",
+                "serviceName": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "packetEncoding": "",
+        "tlsSettings": {
+          "serverName": "sun6-21.userapi.com",
+          "allowInsecure": false,
+          "fingerprint": "",
+          "alpn": []
+        },
+        "realitySettings": {
+          "publicKey": "yrnvHqHNkzaf1GmuRP0gkRK5HJig9y9tciVQB9-fdGA",
+          "shortId": "",
+          "serverName": "sun6-21.userapi.com"
+        },
+        "kcpSettings": {
+          "seed": ""
+        },
+        "grpcSettings": {
+          "serviceName": ""
+        }
+      }
+    }
+  ],
+  "policy": {
+    "levels": {
+      "1": {
+        "connIdle": 30
+      }
+    },
+    "system": {
+      "statsOutboundDownlink": true,
+      "statsOutboundUplink": true
+    }
+  },
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "inboundTag": [
+          "dns-in"
+        ],
+        "outboundTag": "dns-out",
+        "type": "field"
+      }
+    ]
+  },
+  "stats": {}
+}
